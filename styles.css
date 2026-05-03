@@ -1,0 +1,92 @@
+/* ----------VARIABLES & SETUP---------- */
+
+:root {
+  /* ------COLORS------ */
+  --primary-purple-50: hsl(260, 100%, 95%);
+  --primary-purple-300: hsl(264, 82%, 80%);
+  --primary-purple-500: hsl(263, 55%, 52%);
+  --grey-100: hsl(214, 17%, 92%);
+  --grey-200: hsl(0, 0%, 81%);
+  --grey-400: hsl(224, 10%, 45%);
+  --grey-500: hsl(217, 19%, 35%);
+  --dark-blue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
+  --white: hsl(0, 0%, 100%);
+
+  /* ------FLUID FONTS------ */
+  --fluid-font--1: clamp(0.6771rem, 0.6513rem + 0.1098vw, 0.7502rem);
+  --fluid-font-0: clamp(0.8125rem, 0.7465rem + 0.2817vw, 1rem);
+  --fluid-font-1: clamp(0.975rem, 0.8489rem + 0.5378vw, 1.333rem);
+  --fluid-font-2: clamp(1.17rem, 0.9563rem + 0.9118vw, 1.7769rem);
+}
+
+/* ----------BASE & RESET---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-purple-50);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  min-height: 100dvh;
+  /* display: grid;
+  place-content: center; */
+  padding: 4rem 2rem;
+}
+
+/* ----------TYPOGRAPHY---------- */
+
+.testimonial-author {
+  font-size: var(--fluid-font-1);
+  font-weight: 500;
+}
+
+.author-status {
+  font-size: var(--fluid-font--1);
+  font-weight: 400;
+}
+
+.testimonial-caption {
+  font-size: var(--fluid-font-2);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.testimonial-quote {
+  font-size: var(--fluid-font-0);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ----------COMPONENTS---------- */
+
+.cards {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); */
+  gap: 1.2rem;
+}
+
+.testimonial {
+  grid-row: span 3;
+  display: grid;
+  grid-template-rows: subgrid;
+  padding: 2rem;
+}
+
+.avatar {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-img {
+  width: 40px;
+  border-radius: 50%;
+}
