@@ -39,7 +39,7 @@ body {
 
 /* ----------TYPOGRAPHY---------- */
 
-.testimonial-author {
+.author-name {
   font-size: var(--fluid-font-1);
   font-weight: 500;
 }
@@ -53,6 +53,7 @@ body {
   font-size: var(--fluid-font-2);
   font-weight: 600;
   line-height: 1.2;
+  letter-spacing: 0.5px;
 }
 
 .testimonial-quote {
@@ -72,14 +73,16 @@ body {
   gap: 1.2rem;
 }
 
-.testimonial {
+.testimonial-card {
   grid-row: span 3;
   display: grid;
   grid-template-rows: subgrid;
   padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 10px 10px 20px var(--grey-400);
 }
 
-.avatar {
+.author {
   width: max-content;
   display: flex;
   align-items: center;
@@ -87,6 +90,33 @@ body {
 }
 
 .author-img {
-  width: 40px;
+  width: 32px;
   border-radius: 50%;
+}
+
+.testimonial-card--primary {
+  background-color: var(--primary-purple-500);
+  color: var(--white);
+  & .author-img {
+    border: 2px solid var(--white);
+  }
+}
+
+.testimonial-card--neutral {
+  background-color: var(--grey-500);
+  color: var(--grey-100);
+}
+
+.testimonial-card--dark {
+  background-color: var(--dark-blue);
+  color: var(--grey-200);
+
+  & .author-img {
+    border: 2px solid var(--primary-purple-500);
+  }
+}
+
+.testimonial-card--light {
+  background-color: var(--white);
+  color: var(--grey-500);
 }
