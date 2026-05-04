@@ -18,6 +18,7 @@
   --fluid-font-0: clamp(0.8125rem, 0.7465rem + 0.2817vw, 1rem);
   --fluid-font-1: clamp(0.975rem, 0.8489rem + 0.5378vw, 1.333rem);
   --fluid-font-2: clamp(1.17rem, 0.9563rem + 0.9118vw, 1.7769rem);
+
 }
 
 /* ----------BASE & RESET---------- */
@@ -32,9 +33,7 @@ body {
   background-color: var(--primary-purple-50);
   font-family: "Barlow Semi Condensed", sans-serif;
   min-height: 100dvh;
-  /* display: grid;
-  place-content: center; */
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
 }
 
 /* ----------TYPOGRAPHY---------- */
@@ -53,7 +52,6 @@ body {
   font-size: var(--fluid-font-2);
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.5px;
 }
 
 .testimonial-quote {
@@ -69,7 +67,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); */
   gap: 1.2rem;
 }
 
@@ -120,3 +117,39 @@ body {
   background-color: var(--white);
   color: var(--grey-500);
 }
+
+/* ----------SMALL---------- */
+
+@media (min-width: 550px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .col-sm-2 {
+    grid-column: span 2;
+  }
+
+}
+
+/* ----------MEDIUM---------- */
+
+@media (min-width: 765px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .col-md-2 {
+    grid-column: span 2;
+  }
+
+  .col-md-3 {
+    grid-column: span 3;
+  }
+
+  .row-md-3 {
+    grid-row: span 3;
+  }
+}
+
+
+/* large 925px */
