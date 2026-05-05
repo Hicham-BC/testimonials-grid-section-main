@@ -64,7 +64,7 @@ body {
 
 .cards {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
   display: grid;
   gap: 1.2rem;
@@ -146,10 +146,44 @@ body {
     grid-column: span 3;
   }
 
-  .row-md-3 {
+  /* .row-md-3 {
     grid-row: span 3;
-  }
+  } */
 }
 
 
-/* large 925px */
+/* ----------LARGE---------- */
+
+@media (min-width: 1150px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, auto);
+  }
+
+  .lg-primary {
+    grid-column: 1 / 3;
+  }
+
+  .lg-neutral {
+    grid-column: 3 / 4;
+  }
+
+  .lg-dark {
+    grid-column: 2 / 4;
+  }
+
+  .lg-light1 {
+    grid-row: 4 / span 3;
+    grid-column: 1 / 2;
+  }
+
+  .lg-light2 {
+    grid-row: 1 / span 6;
+    grid-column: 4 / 5;
+  }
+
+  .lg-light2 > :nth-child(3) {
+    grid-row: 3 / span 4;
+  }
+
+}
